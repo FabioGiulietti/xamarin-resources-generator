@@ -17,13 +17,13 @@ namespace xamarin_resources_generator {
     public class AndroidLanguagesGenerator : Task {
 
         /**
-         * Path to the source folder from which the activity retrieves all the .resx files to be transformed
+         * Path to the source folder from which the task retrieves all the .resx files to be transformed
          */
         [Required]
         public string OriginFolder { get; set; }
 
         /**
-         * Path to the target Android folder where the activity generates the values folders
+         * Path to the target Android folder where the task generates the values folders
          */
         [Required]
         public string DestinationFolder { get; set; }
