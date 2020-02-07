@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Linq;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
-namespace xamarin_resources_generator {
+namespace XamarinResourcesGenerator {
 
     /**
      * MsBuild task that transform all .resx files in a specified folder into
@@ -46,13 +47,11 @@ namespace xamarin_resources_generator {
                     if (str.Name != "data")
                         continue;
 
-                    string stringParsed = str.Value as string;
-                    stringParsed = stringParsed.Replace("'", "\\'");
-                    stringParsed = stringParsed.Replace("{newline}", @"\n");
-                    stringParsed = stringParsed.Replace("{quotationMark}", @"\""");
-                    stringParsed = stringParsed.Replace("&lt;", "<");
-                    stringParsed = stringParsed.Replace("&gt;", ">");
-
+                    string stringParsed = (str.Value as string)
+                        .Replace("'", @"\'")
+                        .Replace("{newline}", @"\n")
+                        .Replace("{quotationMark}", @"\""");
+                    
                     resources.Add(new XElement("string", new XAttribute("name", str.FirstAttribute.Value), stringParsed));
                 }
 

@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-resources-generator", "xamarin-resources-generator\xamarin-resources-generator.csproj", "{68581E7C-3049-48DE-A066-E9414FD065CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinResourcesGenerator", "xamarin-resources-generator\XamarinResourcesGenerator.csproj", "{68581E7C-3049-48DE-A066-E9414FD065CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
